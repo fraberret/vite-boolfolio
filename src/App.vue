@@ -10,12 +10,22 @@ export default {
       base_api: 'http://127.0.0.1:8000/api/projects'
     }
   },
+  methods: {
+    callApi(url) {
+      axios
+        .get(url)
+        .then(response => {
+          console.log(response);
+          this.projects = response.data;
+        })
+        .catch(err => {
+          console.error(err);
+        })
+    }
+  },
   mounted() {
-    axios
-      .get(this.base_api)
-      .then(response => {
-        console.log(response);
-      })
+    let url = this.base_api
+    this.callApi(url)
   }
 }
 </script>
