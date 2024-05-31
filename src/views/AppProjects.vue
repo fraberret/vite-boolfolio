@@ -1,12 +1,12 @@
 <script>
 export default {
-    name: 'AppHome',
+    name: 'AppProjects'
 }
 </script>
 
 <template>
     <div>
-        <h1>HomePage</h1>
+        <h1>This is the projects page</h1>
     </div>
 </template>
 
