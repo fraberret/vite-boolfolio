@@ -5,6 +5,7 @@ import AppHome from "./views/AppHome.vue";
 import AppProjects from "./views/AppProjects.vue"
 import AppAbout from "./views/AppAbout.vue";
 import AppContacts from "./views/AppContacts.vue";
+import AppProjectShow from './views/AppProjectShow.vue';
 
 
 
@@ -30,6 +31,10 @@ const router = createRouter({
             path: '/contacts',
             name: 'contacts',
             component: AppContacts
+        },
+        {
+            path: '/projects/:id',
+            component: AppProjectShow,
         }
     ]
 })
