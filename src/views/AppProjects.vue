@@ -8,6 +8,7 @@ export default {
     components: {
         ProjectCard
     },
+
     data() {
         return {
             projects: [],
@@ -42,7 +43,7 @@ export default {
 
 
             <div class="row py-5 flex-wrap">
-                <ProjectCard v-for="project in projects.data" :project />
+                <ProjectCard v-for="project in projects.data" :project :base_api />
             </div>
 
         </div>

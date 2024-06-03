@@ -4,6 +4,7 @@ export default {
   props:
     [
       'project',
+      'base_api'
     ],
 
 }
