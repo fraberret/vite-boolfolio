@@ -1,6 +1,10 @@
 <script>
 export default {
-  name: 'ProjectCard'
+  name: 'ProjectCard',
+  props:
+    [
+      'project',
+    ],
 }
 </script>
 
@@ -8,16 +12,8 @@ export default {
 
   <div class="col">
     <div class="card">
-
-      <div class="card">
-
-
-<img :src="base_api + '/storage/' + project.cover_image" alt="">
-
-{{ project.title }}
-
-</div>
-
+      <img :src="base_api + '/storage/' + project.cover_image" alt="">
+      {{ project.title }}
     </div>
   </div>
 </template>
