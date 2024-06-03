@@ -2,56 +2,94 @@
 
 import axios from 'axios';
 
+import AppHeader from './components/AppHeader.vue'
+
 export default {
   name: 'App',
-  data() {
-    return {
-      projects: [],
-      base_api: 'http://127.0.0.1:8000',
-      base_projects_url: '/api/projects'
-    }
-  },
-  methods: {
-    callApi(url) {
-      axios
-        .get(url)
-        .then(response => {
-          console.log(response.data.projects);
-          this.projects = response.data.projects;
-        })
-        .catch(err => {
-          console.error(err);
-        })
-    }
-  },
-  mounted() {
-    let url = this.base_api + this.base_projects_url
-    this.callApi(url)
+
+  components: {
+    AppHeader
   }
+
 }
 </script>
 
 <template>
 
-  <div class="container">
-    <div class="row">
-      <div class="col" v-for="project in projects.data">
+  <AppHeader></AppHeader>
+  <main>
+    <RouterView />
+  </main>
 
-        <div class="card">
-          <template>
 
-          </template>
+  <footer>
 
-          <img :src="base_api + '/storage/app/' + project.cover_image" alt="">
-          <template>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h3>LOGO</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur cumque unde distinctio consectetur fuga
+            ipsum harum eum quas assumenda nesciunt vero ducimus aliquid natus quis ratione, dolor optio eius ea.
 
-          </template>
-          {{ project.title }}
+          </p>
+        </div>
+        <div class="col">
+          <h3>Quick links</h3>
+          <ul>
+            <li>
+              <router-link to="/">Home</router-link>
+            </li>
+            <li>
+              <router-link to="/projects">Projects</router-link>
+            </li>
+            <li>
+              <router-link to="/about">About</router-link>
+            </li>
+            <li>
+              <router-link to="/contacts">Contacts</router-link>
+            </li>
 
+          </ul>
+        </div>
+        <div class="col">
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Cookies</a></li>
+            <li><a href="#">GDPR</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h3>Find me also</h3>
+          <ul>
+            <li>
+              <a href="#">
+                <i class="fab fa-linkedin fa-sm fa-fw"></i>
+                Linkedin
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fab fa-youtube fa-sm fa-fw"></i>
+                YouTube
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fab fa-github fa-sm fa-fw"></i>
+                GitHub
+              </a>
+            </li>
+
+          </ul>
         </div>
       </div>
     </div>
-  </div>
+
+
+
+  </footer>
 </template>
 
 <style></style>
