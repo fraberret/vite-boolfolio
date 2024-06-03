@@ -34,13 +34,13 @@ export default {
         <nav class="main_menu">
 
             <div class="container">
+                <div class="up-menu">
+                    <router-link :to="{ name: item.route }" v-for="item in menu">{{ item.text }}</router-link>
+                </div>
                 <div class="logo">
                     LOGO
                 </div>
 
-                <div class="right-menu">
-                    <router-link :to="{ name: item.route }" v-for="item in menu">{{ item.text }}</router-link>
-                </div>
             </div>
         </nav>
 
