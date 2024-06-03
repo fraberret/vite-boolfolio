@@ -1,7 +1,14 @@
 <script>
 import axios from 'axios';
+import ProjectCard from '../components/ProjectCard.vue';
+
 export default {
+
     name: 'AppProjects',
+
+    components: {
+        ProjectCard
+    },
     data() {
         return {
             projects: [],
@@ -35,14 +42,8 @@ export default {
         <div class="row">
             <div class="col" v-for="project in projects.data">
 
-                <div class="card">
+                <ProjectCard></ProjectCard>
 
-
-                    <img :src="base_api + '/storage/' + project.cover_image" alt="">
-
-                    {{ project.title }}
-
-                </div>
             </div>
         </div>
     </div>
