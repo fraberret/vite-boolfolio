@@ -13,10 +13,13 @@ export default {
 <template>
 
   <div class="col">
-    <div class="card">
-      <img :src="base_api + '/storage/' + project.cover_image" alt="">
-      {{ project.title }}
-    </div>
+    <router-link :to="{ name: 'appProjectShow', params: { id: project.id } }">
+      <div class="card">
+        <img :src="base_api + '/storage/' + project.cover_image" alt="">
+        {{ project.title }}
+      </div>
+    </router-link>
+
   </div>
 </template>
 

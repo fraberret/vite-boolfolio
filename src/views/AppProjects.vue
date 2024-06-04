@@ -13,7 +13,8 @@ export default {
         return {
             projects: [],
             base_api: 'http://127.0.0.1:8000',
-            base_projects_url: '/api/projects'
+            base_projects_url: '/api/projects',
+            loading: true
         }
     },
     methods: {
@@ -23,6 +24,7 @@ export default {
                 .then(response => {
                     console.log(response.data.projects);
                     this.projects = response.data.projects;
+                    this.loading = false
                 })
                 .catch(err => {
                     console.error(err);
@@ -39,13 +41,17 @@ export default {
 
 <template>
     <div class="container">
-        <div class="row">
+        <div class="row" v-if="!loading">
 
 
-            <div class="row py-5 flex-wrap">
-                <ProjectCard v-for="project in projects.data" :project :base_api />
+            <ProjectCard v-for="project in projects.data" :project :base_api />
+
+
+        </div>
+        <div class="row" v-else>
+            <div class="col">
+                Loading ...
             </div>
-
         </div>
     </div>
 </template>
