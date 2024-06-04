@@ -43,6 +43,7 @@ export default {
 <template>
 
     <div class="container " v-if="!loading">
+        <img :src="base_api + '/storage/' + project.cover_image" alt="">
         {{ project.title }}
     </div>
 
