@@ -42,7 +42,10 @@ export default {
 
         <nav class="main_menu">
 
-            <div class="container">
+            <div class="container d-flex justify-between align-center">
+                <div class="logo">
+                    LOGO
+                </div>
                 <div class="up-menu">
                     <div v-for="item in menu" :key="item.route" :class="{ active: isActive(item.route) }"
                         @click="setActiveRoute(item.route)" class="menu_voice">
@@ -50,11 +53,9 @@ export default {
                             {{ item.text }}
                         </router-link>
                     </div>
-                    <div class="underline" :style="underlineStyle"></div>
+                    <div class="underline"></div>
                 </div>
-                <div class="logo">
-                    LOGO
-                </div>
+
 
             </div>
         </nav>
