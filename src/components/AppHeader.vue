@@ -44,10 +44,13 @@ export default {
 
             <div class="container">
                 <div class="up-menu">
-                    <router-link :to="{ name: item.route }" v-for="item in menu" :key="item.route"
-                        :class="{ active: isActive(item.route) }" @click.native="setActiveRoute(item.route)">
-                        <div class="menu_voice">{{ item.text }}</div>
-                    </router-link>
+                    <div v-for="item in menu" :key="item.route" :class="{ active: isActive(item.route) }"
+                        @click="setActiveRoute(item.route)" class="menu_voice">
+                        <router-link :to="{ name: item.route }">
+                            {{ item.text }}
+                        </router-link>
+                    </div>
+                    <div class="underline" :style="underlineStyle"></div>
                 </div>
                 <div class="logo">
                     LOGO
