@@ -92,7 +92,7 @@ export default {
         </div>
     </div>
 
-    <div class="projects">
+    <div class="projects_home">
 
         <div class="container">
             <h1>Alcuni dei miei progetti</h1>
@@ -103,9 +103,7 @@ export default {
                     <img :src="base_api + '/storage/' + project.cover_image" alt="" class="card-image">
                     <div class="text">
                         <h3> {{ project.title }}</h3>
-                        <p>
-                            {{ project.description }}
-                        </p>
+
                     </div>
 
                 </div>
