@@ -44,7 +44,7 @@ export default {
 
             <div class="container d-flex justify-between align-center">
                 <div class="logo">
-                    LOGO
+                    <img src="/images/logo.jpg" alt="">
                 </div>
                 <div class="up-menu">
                     <div v-for="item in menu" :key="item.route" :class="{ active: isActive(item.route) }"

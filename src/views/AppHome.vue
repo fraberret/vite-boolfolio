@@ -1,9 +1,56 @@
 <script>
 
-
+import axios from 'axios';
 
 export default {
     name: 'AppHome',
+
+    data() {
+        return {
+            currentIndex: 0,
+            projects: [],
+            base_api: 'http://127.0.0.1:8000',
+            base_projects_url: '/api/projects',
+            loading: true
+        }
+    },
+    methods: {
+
+        prev() {
+            this.currentIndex--
+            if (this.currentIndex < 0) {
+                this.currentIndex = this.projects.length - 1
+
+            }
+        },
+        next() {
+            this.currentIndex++
+            if (this.currentIndex === this.projects.length) {
+                this.currentIndex = 0
+
+            }
+        },
+        changeThumb(index) {
+            this.currentIndex = index
+        },
+
+        callApi(url) {
+            axios
+                .get(url)
+                .then(response => {
+                    this.projects = response.data.projects.data;
+                    console.log(this.projects);
+                    this.loading = false
+                })
+                .catch(err => {
+                    console.error(err);
+                })
+        }
+    },
+    mounted() {
+        let url = this.base_api + this.base_projects_url
+        this.callApi(url)
+    }
 
 }
 </script>
@@ -43,6 +90,35 @@ export default {
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="projects">
+
+        <div class="container">
+            <h1>Alcuni dei miei progetti</h1>
+
+            <div class="slider">
+                <div class="item" v-for="(project, index) in projects" v-show="index === currentIndex">
+
+                    <img :src="base_api + '/storage/' + project.cover_image" alt="" class="card-image">
+                    <div class="text">
+                        <h3> {{ project.title }}</h3>
+                        <p>
+                            {{ project.description }}
+                        </p>
+                    </div>
+
+                </div>
+                <div class="thumbs">
+                    <div class="prev" @click="prev()"><i class="fa fa-arrow-left" aria-hidden="true"></i></div>
+                    <div class="next" @click="next()"><i class="fa fa-arrow-right" aria-hidden="true"></i></div>
+
+
+                </div>
+            </div>
+
+        </div>
+
     </div>
 
 

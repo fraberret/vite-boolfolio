@@ -93,13 +93,15 @@ header {
     padding: 2rem;
 
 
-    background-color: #F7F7F9;
+    background-color: white;
 
 
 
 
     & a {
         color: black;
+
+
     }
 
     .up-menu {
@@ -143,8 +145,13 @@ header {
                 transform: translateY(-2px);
             }
         }
+
+
     }
 
+    & .logo {
+        width: 100px;
+    }
 
 }
 
@@ -167,6 +174,13 @@ main {
 
     }
 
+
+
+}
+
+
+.projects {
+    margin: 2rem 0rem;
 }
 
 .socials {
