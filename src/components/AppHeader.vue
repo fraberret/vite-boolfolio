@@ -39,13 +39,16 @@ export default {
 <template>
     <header>
 
-
+        <!-- Menu section-->
         <nav class="main_menu">
-
             <div class="container d-flex justify-between align-center">
+
+                <!-- Logo -->
                 <div class="logo">
                     <img src="/images/logo.jpg" alt="">
                 </div>
+
+                <!-- Menu voices -->
                 <div class="up-menu">
                     <div v-for="item in menu" :key="item.route" :class="{ active: isActive(item.route) }"
                         @click="setActiveRoute(item.route)" class="menu_voice">
@@ -53,14 +56,11 @@ export default {
                             {{ item.text }}
                         </router-link>
                     </div>
+
                     <div class="underline"></div>
                 </div>
-
-
             </div>
         </nav>
-
-
     </header>
 
 </template>

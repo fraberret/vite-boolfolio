@@ -57,17 +57,19 @@ export default {
 
 <template>
 
+    <!-- Jumbotron -->
     <div class="jumbotron">
-
         <div class="container">
             <div class="row">
-                <div class="socials">
 
+                <!-- Social section -->
+                <div class="socials">
                     <i class="fa-brands fa-github"></i>
                     <i class="fa-brands fa-instagram"></i>
                     <i class="fa-brands fa-linkedin"></i>
-
                 </div>
+
+                <!-- Bio section -->
                 <div class="col_4">
                     <h1>
                         Ciao, <br> sono Francesco Berretta
@@ -88,35 +90,36 @@ export default {
                         di <strong>sviluppare</strong> un'altra grande passione.</p>
 
                 </div>
+
             </div>
         </div>
     </div>
 
+    <!-- Projects Sections -->
     <div class="projects_home">
-
         <div class="container">
             <h1>Alcuni dei miei progetti</h1>
 
+            <!-- Carousel -->
             <div class="slider">
-                <div class="item" v-for="(project, index) in projects" v-show="index === currentIndex">
 
+                <!-- Carousel Image  -->
+                <div class="item" v-for="(project, index) in projects" v-show="index === currentIndex">
                     <img :src="base_api + '/storage/' + project.cover_image" alt="" class="card-image">
+
+                    <!-- Carousel text -->
                     <div class="text">
                         <h3> {{ project.title }}</h3>
-
                     </div>
-
                 </div>
+
+                <!-- Carousel prev next buttons -->
                 <div class="thumbs">
                     <div class="prev" @click="prev()"><i class="fa fa-arrow-left" aria-hidden="true"></i></div>
                     <div class="next" @click="next()"><i class="fa fa-arrow-right" aria-hidden="true"></i></div>
-
-
                 </div>
             </div>
-
         </div>
-
     </div>
 
 

@@ -40,14 +40,16 @@ export default {
 </script>
 
 <template>
+
+    <!-- Projects page -->
     <div class="container">
         <div class="row" v-if="!loading">
 
-
+            <!-- Project Card -->
             <ProjectCard v-for="project in projects.data" :project :base_api />
-
-
         </div>
+
+        <!-- Loading -->
         <div class="row" v-else>
             <div class="col">
                 Loading ...
