@@ -68,6 +68,11 @@ img {
             padding: 1rem;
         }
 
+        .col_6 {
+            width: calc(100%/12*6);
+            padding: 1rem;
+        }
+
         .col {
             width: 100%;
             padding: 1rem;
@@ -197,10 +202,11 @@ main {
             width: 60%;
             margin: auto;
             height: 100%;
-            position: relative;
+
             border-radius: 50%;
 
             & .item {
+                position: relative;
 
                 border-radius: 50%;
                 width: 100%;
@@ -225,19 +231,22 @@ main {
 
             & .prev,
             .next {
-
-                margin: 10px 0;
+                color: var(--primary);
+                font-size: 30px;
+                margin: 0 10px;
                 border-radius: 50%;
-                background: #ccc;
                 position: absolute;
                 cursor: pointer;
                 z-index: 999;
-                padding: 10px;
+                transform: translateY(-50%);
+                top: 50%;
             }
 
 
             & .next {
                 right: 0;
+
+
             }
 
             & .prev {

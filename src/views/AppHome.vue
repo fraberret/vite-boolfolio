@@ -7,7 +7,7 @@ export default {
 
     data() {
         return {
-            currentIndex: 0,
+
             projects: [],
             base_api: 'http://127.0.0.1:8000',
             base_projects_url: '/api/projects',
@@ -16,23 +16,7 @@ export default {
     },
     methods: {
 
-        prev() {
-            this.currentIndex--
-            if (this.currentIndex < 0) {
-                this.currentIndex = this.projects.length - 1
 
-            }
-        },
-        next() {
-            this.currentIndex++
-            if (this.currentIndex === this.projects.length) {
-                this.currentIndex = 0
-
-            }
-        },
-        changeThumb(index) {
-            this.currentIndex = index
-        },
 
         callApi(url) {
             axios
@@ -70,7 +54,7 @@ export default {
                 </div>
 
                 <!-- Bio section -->
-                <div class="col_4">
+                <div class="col_6">
                     <h1>
                         Ciao, <br> sono Francesco Berretta
 
@@ -100,25 +84,6 @@ export default {
         <div class="container">
             <h1>Alcuni dei miei progetti</h1>
 
-            <!-- Carousel -->
-            <div class="slider">
-
-                <!-- Carousel Image  -->
-                <div class="item" v-for="(project, index) in projects" v-show="index === currentIndex">
-                    <img :src="base_api + '/storage/' + project.cover_image" alt="" class="card-image">
-
-                    <!-- Carousel text -->
-                    <div class="text">
-                        <h3> {{ project.title }}</h3>
-                    </div>
-                </div>
-
-                <!-- Carousel prev next buttons -->
-                <div class="thumbs">
-                    <div class="prev" @click="prev()"><i class="fa fa-arrow-left" aria-hidden="true"></i></div>
-                    <div class="next" @click="next()"><i class="fa fa-arrow-right" aria-hidden="true"></i></div>
-                </div>
-            </div>
         </div>
     </div>
 

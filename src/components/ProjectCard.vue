@@ -8,10 +8,10 @@ export default {
     ],
   computed: {
     isTruncated() {
-      return this.project.description.length > 100;
+      return this.project.description.length > 80;
     },
     truncatedDescription() {
-      return this.isTruncated ? this.project.description.slice(0, 100) + '...' : this.project.description;
+      return this.isTruncated ? this.project.description.slice(0, 80) + '...' : this.project.description;
     }
   }
 
