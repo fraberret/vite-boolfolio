@@ -48,9 +48,9 @@ export default {
 
                 <!-- Social section -->
                 <div class="socials">
-                    <i class="fa-brands fa-github"></i>
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-linkedin"></i>
+                    <a href="https://github.com/fraberret" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.instagram.com/_.cccesco/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/francesco-berretta-dev/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
 
                 <!-- Bio section -->
