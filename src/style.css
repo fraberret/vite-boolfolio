@@ -4,6 +4,11 @@
 }
 
 
+#rocket{
+opacity: 0.3;
+margin-left: 3rem;
+}
+
 
 /* #region Fonts */
 .poppins-regular {
@@ -101,7 +106,7 @@ img {
 
 /* Header region */
 header {
-    padding: 2rem;
+    padding: 1rem;
     background-color: white;
 
     & a {

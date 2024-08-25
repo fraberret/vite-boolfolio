@@ -46,7 +46,7 @@ export default {
         <div class="row" v-if="!loading">
 
             <!-- Project Card -->
-            <ProjectCard v-for="project in projects.data" :project :base_api />
+            <ProjectCard v-for="project in projects" :project :base_api />
         </div>
 
         <!-- Loading -->
