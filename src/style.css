@@ -1,6 +1,8 @@
 /* Color Palette */
 :root {
     --primary: #DF2935;
+    --darker: #0F0A0A;
+    --dark: #cac6c6;
 }
 
 
@@ -25,6 +27,9 @@ margin-left: 3rem;
 
 /* #endregion Fonts */
 
+.container_lg{
+    min-width: 70%;
+}
 
 /* #region General rules  */
 * {
@@ -38,8 +43,9 @@ margin-left: 3rem;
 a {
     text-decoration: none;
     
-
 }
+
+
 
 img {
     max-width: 100%;
@@ -58,7 +64,7 @@ img {
 }
 
 .container {
-    width: 80%;
+    width: 90%;
     max-width: 1176px;
     margin: auto;
 
@@ -106,24 +112,31 @@ img {
 
 /* Header region */
 header {
-    padding: 1rem;
+    
     background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999999;
 
     & a {
         color: black;
     }
+    
+    .main_menu{
+        padding: 1rem;
+    }
 
     .up-menu {
-        text-align: left;
-
         gap: 1rem;
         display: flex;
-        justify-content: right;
+        justify-content: center;
         text-decoration: none;
-        color: white;
+        
 
         .menu_voice {
             position: relative;
+            display: none;
             cursor: pointer;
             transition: transform 0.3s ease;
 
@@ -159,18 +172,58 @@ header {
     }
 
     & .logo {
-        width: 100px;
+        width: 30px;
+        margin-right: 0.7rem;
     }
+
+    & .open_menu{
+       font-size: 20px;
+       cursor: pointer;
+    }
+
+    .sm_menu_section{
+        box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition:  height 0.5s ease, opacity 0.5s ease-in-out;
+        
+    
+    }
+
+
+    .sm_menu_voice{
+        border-top: 1px solid var(--dark);
+        padding: 1.5rem;
+        text-align: right;
+        list-style: none;
+    }
+
+    .menu-open {
+        height: 296px; /* Imposta un'altezza massima sufficiente a contenere il menu */
+        opacity: 1;
+       
+        
+        
+
+        /* Mostra il menu quando è aperto */
+      }
+      
+      .menu-closed {
+        height: 0; /* Imposta un'altezza massima sufficiente a contenere il menu */
+        opacity: 0; /* Assicura che il menu sia nascosto quando è chiuso */
+      }
 
 }
 
 
 /* Main Region */
 main {
-    min-height: 100vh;
-
+    
+    
     /* Home Page jumbotron */
     & .jumbotron {
+        height: 100vh;
         padding: 2rem 0rem;
         background-color: #4158D0;
         background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
@@ -372,4 +425,41 @@ footer {
             color: black;
         }
     }
+}
+
+
+
+@media (min-width: 650px) {
+  
+    .open_menu{
+        display: none !important;
+       }
+       .menu_voice{
+        display: block !important;
+       }
+
+}
+
+@media (min-width: 992px) {
+ 
+
+    
+
+
+}
+
+@media (min-width: 1200px) {
+
+    .main_menu{
+        padding: 1rem 5rem !important;
+    }
+
+   .up-menu{
+    gap: 3rem !important;
+   }
+
+   .logo{
+    width: 50px !important;
+    margin-right: 1rem !important;
+   }
 }

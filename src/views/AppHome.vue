@@ -77,7 +77,7 @@ export default {
                 
                 <div class="col-6 d-flex align-self-center">
 
-                    <img id="rocket" src="/public/images/rocket_icon_246043.svg" alt="">
+                   
 
                 </div>
 
@@ -92,6 +92,7 @@ export default {
 
         </div>
     </div>
+    
 
 
 
