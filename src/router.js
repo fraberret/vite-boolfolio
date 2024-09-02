@@ -1,4 +1,4 @@
-import { createWebHistory, createRouter } from 'vue-router'
+/* import { createWebHistory, createRouter } from 'vue-router'
 
 
 import AppHome from "./views/AppHome.vue";
@@ -41,4 +41,4 @@ const router = createRouter({
 })
 
 
-export default router;
+export default router; */

@@ -4,12 +4,14 @@ import axios from 'axios';
 
 import AppHeader from './components/AppHeader.vue'
 import AppFooter from './components/AppFooter.vue'
+import AppHome from './views/AppHome.vue';
 
 export default {
   name: 'App',
 
   components: {
     AppHeader,
+    AppHome,
     AppFooter
   }
 
@@ -19,9 +21,8 @@ export default {
 <template>
 
   <AppHeader></AppHeader>
-  <main>
-    <RouterView />
-  </main>
+  
+  <AppHome></AppHome>
 
   <AppFooter></AppFooter>
 

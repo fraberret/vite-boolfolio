@@ -83,24 +83,6 @@ img {
             width: calc(100%/12*6);
             padding: 1rem;
         }
-
-        .col {
-            width: 100%;
-            padding: 1rem;
-
-            @media (min-width: 600px) {
-                width: 50%;
-            }
-
-            @media (min-width: 992px) {
-                width: calc(100% / 12 * 4);
-            }
-
-            @media (min-width: 1200px) {
-                width: calc(100% / 12 * 3);
-            }
-
-        }
     }
 
 }
@@ -127,19 +109,21 @@ header {
         padding: 1rem;
     }
 
+    
+    
     .up-menu {
         gap: 1rem;
         display: flex;
         justify-content: center;
         text-decoration: none;
         
-
+    
         .menu_voice {
             position: relative;
             display: none;
             cursor: pointer;
             transition: transform 0.3s ease;
-
+    
             &::after {
                 content: '';
                 position: absolute;
@@ -152,26 +136,24 @@ header {
                 transform-origin: left;
                 transform: scaleX(0);
             }
-
+    
             &:hover::after {
                 background: var(--primary);
                 transform: scaleX(1);
             }
-
+    
             &.active::after {
                 background: var(--primary);
                 transform: scaleX(1);
             }
-
+    
             &:hover {
                 transform: translateY(-2px);
             }
         }
+}
 
-
-    }
-
-    & .logo {
+& .logo {
         width: 30px;
         margin-right: 0.7rem;
     }
@@ -182,21 +164,28 @@ header {
     }
 
     .sm_menu_section{
+        
         box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
         height: 0;
         opacity: 0;
-        overflow: hidden;
-        transition:  height 0.5s ease, opacity 0.5s ease-in-out;
+        transition:  height 0.4s ease, opacity 1.8s ease;
         
-    
+
     }
 
 
     .sm_menu_voice{
-        border-top: 1px solid var(--dark);
-        padding: 1.5rem;
+       
+       
         text-align: right;
         list-style: none;
+
+        & a{
+            display: block;
+            width: 100%;
+            border-top: 1px solid var(--dark);
+            padding: 1.5rem;
+        }
     }
 
     .menu-open {
@@ -211,7 +200,8 @@ header {
       
       .menu-closed {
         height: 0; /* Imposta un'altezza massima sufficiente a contenere il menu */
-        opacity: 0; /* Assicura che il menu sia nascosto quando è chiuso */
+        opacity: 0;
+        transition:  height 0.4s ease, opacity 0.2s ease; /* Assicura che il menu sia nascosto quando è chiuso */
       }
 
 }
@@ -228,6 +218,44 @@ main {
         background-color: #4158D0;
         background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
         color: white;
+
+
+        & .jumbotron_content{
+            flex-direction: column;
+            width: 70%;
+            margin: auto;
+            padding-top: 80px ;
+            height: 100%;
+            text-align: center;
+            justify-content: center;
+
+            & h1{
+                font-size: 2rem;
+                letter-spacing: 0.3rem;
+            }
+
+
+            & .jumbotron_info{
+                margin-top: 3rem;
+                
+            }
+
+            & .jumbotron_button{
+                margin-top: 5rem;
+
+                & a{
+                    background-color: black;
+                    padding: 0.6rem 2rem;
+                    border-radius: 10px;
+                }
+
+            }
+
+
+        }
+
+        
+
 
         & .profession {
             padding: 1rem 0rem;
@@ -432,6 +460,9 @@ footer {
 @media (min-width: 650px) {
   
     .open_menu{
+        display: none !important;
+       }
+       .sm_menu_section{
         display: none !important;
        }
        .menu_voice{

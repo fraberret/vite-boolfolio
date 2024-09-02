@@ -27,12 +27,12 @@ export default {
         }
     },
     methods: {
-        setActiveRoute(route) {
+      /*   setActiveRoute(route) {
             this.activeRoute = route;
         },
         isActive(route) {
             return this.$route.name === route || this.activeRoute === route;
-        },
+        }, */
 
         toggleMenu() {
       this.isMenuOpen = !this.isMenuOpen;
@@ -55,13 +55,12 @@ export default {
             </div>
 
             <!-- Menu voices -->
-            <div class="up-menu">
-                <div v-for="item in menu" :key="item.route" :class="{ active: isActive(item.route) }"
-                    @click="setActiveRoute(item.route)" class="menu_voice">
-                    <router-link :to="{ name: item.route }">
-                        {{ item.text }}
-                    </router-link>
+             <div class="up-menu">
+
+                <div v-for="item in menu" class="menu_voice">
+                    <a href="#">{{ item.text }}</a>
                 </div>
+              
                 <div @click="toggleMenu" class="open_menu">
                     <i v-if="!isMenuOpen" class="fa fa-bars" aria-hidden="true"></i>
                     <i v-else class="fa fa-close" aria-hidden="true"></i>
@@ -71,10 +70,8 @@ export default {
 
         <div class="sm_menu_section" :class="{ 'menu-open': isMenuOpen, 'menu-closed': !isMenuOpen }">
             <ul>
-                <li v-for="item in menu" :key="item.route" class="sm_menu_voice">
-                    <router-link :to="{ name: item.route }">
-                        {{ item.text }}
-                    </router-link>
+                <li v-for="item in menu" class="sm_menu_voice">
+                   <a href="">{{ item.text }}</a>
                 </li>
             </ul>
             

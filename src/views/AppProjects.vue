@@ -41,21 +41,6 @@ export default {
 
 <template>
 
-    <!-- Projects page -->
-    <div class="container">
-        <div class="row" v-if="!loading">
-
-            <!-- Project Card -->
-            <ProjectCard v-for="project in projects" :project :base_api />
-        </div>
-
-        <!-- Loading -->
-        <div class="row" v-else>
-            <div class="col">
-                Loading ...
-            </div>
-        </div>
-    </div>
 </template>
 
 
