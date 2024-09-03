@@ -46,7 +46,7 @@ img{
 }
 
 .skills{
-    margin: 4rem 0;
+    margin-top: 4rem ;
     & h3 {
         margin-bottom: 1.5rem;
     }

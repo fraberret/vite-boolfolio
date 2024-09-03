@@ -3,6 +3,7 @@
 import axios from 'axios';
 import AppAbout from '../components/AppAbout.vue';
 import AppSkills from '../components/AppSkills.vue';
+import AppProjects from '../components/AppProjects.vue';
 
 
 export default {
@@ -10,7 +11,8 @@ export default {
 
     components: {
         AppAbout,
-        AppSkills
+        AppSkills,
+        AppProjects
     },
 
 
@@ -51,7 +53,7 @@ export default {
 <template>
     <main >
         <!-- Jumbotron -->
-        <div id="#home" class="jumbotron">
+        <div id="home" class="jumbotron">
             <div class="jumbotron_content d-flex align-center">
 
                 
@@ -65,7 +67,7 @@ export default {
 
                 </div>
 
-                <div class="jumbotron_button">
+                <div class="button">
                     <a href="#aboutme">Projects</a>
                 </div>
 
@@ -73,7 +75,7 @@ export default {
         </div>
 
         <AppAbout id="aboutme"></AppAbout>
-        
+        <AppProjects id="projects"></AppProjects>
 
     </main>
 

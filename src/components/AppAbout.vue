@@ -13,7 +13,8 @@ export default {
 
 <template>
     <div class="aboutme">
-        <div class="aboutme_title">
+        <div class="container">
+           <div class="aboutme_title">
             <h1>ABOUT ME</h1>
             <div class="underline"></div>
             <p>Here you will find more information about me</p>
@@ -38,7 +39,9 @@ export default {
                 <strong>contact</strong> me.
             </p>
         </div>
-        <AppSkills></AppSkills>
+        <AppSkills></AppSkills> 
+        </div>
+        
     </div>
 
 
@@ -61,13 +64,13 @@ export default {
 }
 
 .aboutme {
-    width: 90%;
-    margin: auto;
+   padding: 4rem 0;
+    background-color: #e7e6e6;;
 
 }
 
 .aboutme_title {
-    margin: 4rem 0rem;
+    margin-bottom: 4rem ;
     text-align: center;
 
 
