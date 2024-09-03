@@ -68,8 +68,7 @@ img {
 }
 
 .container {
-    width: 90%;
-    max-width: 1176px;
+    width: 100%;
     margin: auto;
 
 
@@ -85,6 +84,11 @@ img {
 
         .col_6 {
             width: calc(100%/12*6);
+            padding: 1rem;
+        }
+
+        .col_12{
+            width: calc(100%/12*12);
             padding: 1rem;
         }
     }
@@ -157,7 +161,7 @@ header {
         }
 }
 
-& .logo {
+& .main-logo {
         width: 30px;
         margin-right: 0.7rem;
     }
@@ -235,6 +239,7 @@ main {
 
             & h1{
                 font-size: 2.4rem;
+               
                 
             }
 
@@ -479,6 +484,12 @@ footer {
 
 @media (min-width: 992px) {
  
+    .col_m_6{
+        
+            width: calc(100%/12*6) !important;
+            padding: 1rem !important;
+        
+    }
 
     
 
@@ -488,7 +499,9 @@ footer {
 @media (min-width: 1200px) {
 
     .main_menu{
-        padding: 1rem 5rem !important;
+        width: 90%;
+        margin: auto;
+        padding: 1rem 0 !important;
     }
 
    .up-menu{

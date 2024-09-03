@@ -10,7 +10,7 @@ export default {
                 },
                 {
                     'text': 'About',
-                    'route': 'about'
+                    'route': 'aboutme'
                 },
                 {
                     'text': 'Projects',
@@ -50,7 +50,7 @@ export default {
 
             <!-- Logo -->
             <div class="d-flex align-center">
-                <img class="logo" src="/images/logo.jpg" alt="">
+                <img class="main-logo" src="/images/logo.jpg" alt="">
                 <strong class="align-center">Francesco Berretta</strong>
             </div>
 
@@ -58,7 +58,7 @@ export default {
              <div class="up-menu">
 
                 <div v-for="item in menu" class="menu_voice">
-                    <a href="#">{{ item.text }}</a>
+                    <a :href="'#'+ item.route">{{ item.text }}</a>
                 </div>
               
                 <div @click="toggleMenu" class="open_menu">
@@ -71,7 +71,7 @@ export default {
         <div class="sm_menu_section" :class="{ 'menu-open': isMenuOpen, 'menu-closed': !isMenuOpen }">
             <ul>
                 <li v-for="item in menu" class="sm_menu_voice">
-                   <a href="">{{ item.text }}</a>
+                   <a :href="'#'+ item.route">{{ item.text }}</a>
                 </li>
             </ul>
             

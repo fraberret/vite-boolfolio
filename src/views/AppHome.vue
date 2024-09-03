@@ -2,13 +2,15 @@
 
 import axios from 'axios';
 import AppAbout from '../components/AppAbout.vue';
+import AppSkills from '../components/AppSkills.vue';
 
 
 export default {
     name: 'AppHome',
 
     components: {
-        AppAbout
+        AppAbout,
+        AppSkills
     },
 
 
@@ -47,9 +49,9 @@ export default {
 </script>
 
 <template>
-    <main>
+    <main >
         <!-- Jumbotron -->
-        <div class="jumbotron">
+        <div id="#home" class="jumbotron">
             <div class="jumbotron_content d-flex align-center">
 
                 
@@ -71,6 +73,7 @@ export default {
         </div>
 
         <AppAbout id="aboutme"></AppAbout>
+        
 
     </main>
 
