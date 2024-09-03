@@ -40,6 +40,10 @@ margin-left: 3rem;
 
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 a {
     text-decoration: none;
     
@@ -222,7 +226,7 @@ main {
 
         & .jumbotron_content{
             flex-direction: column;
-            width: 70%;
+            width: 90%;
             margin: auto;
             padding-top: 80px ;
             height: 100%;
@@ -230,13 +234,14 @@ main {
             justify-content: center;
 
             & h1{
-                font-size: 2rem;
-                letter-spacing: 0.3rem;
+                font-size: 2.4rem;
+                
             }
 
 
             & .jumbotron_info{
                 margin-top: 3rem;
+               
                 
             }
 
@@ -245,8 +250,9 @@ main {
 
                 & a{
                     background-color: black;
-                    padding: 0.6rem 2rem;
+                    padding: 1rem 5rem;
                     border-radius: 10px;
+                    color: white;
                 }
 
             }

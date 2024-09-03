@@ -1,9 +1,16 @@
 <script>
 
 import axios from 'axios';
+import AppAbout from '../components/AppAbout.vue';
+
 
 export default {
     name: 'AppHome',
+
+    components: {
+        AppAbout
+    },
+
 
     data() {
         return {
@@ -40,33 +47,40 @@ export default {
 </script>
 
 <template>
-<main>
-    <!-- Jumbotron -->
-    <div class="jumbotron">
-       <div class="jumbotron_content d-flex align-center">
-           
+    <main>
+        <!-- Jumbotron -->
+        <div class="jumbotron">
+            <div class="jumbotron_content d-flex align-center">
 
-               <h1>Hi, I'm Francesco Berretta</h1>
-            
+                
+                 <h1>Hi, I'm Francesco Berretta</h1>
+                
 
-        <div class="jumbotron_info">
+                <div class="jumbotron_info">
 
-            <p>A Result-Oriented Web Developer building and managing Websites and Web Applications that leads to the success of the overall product</p>
+                    <p>A Result-Oriented Web Developer building and managing Websites and Web Applications that leads to
+                        the success of the overall product</p>
 
+                </div>
+
+                <div class="jumbotron_button">
+                    <a href="#aboutme">Projects</a>
+                </div>
+
+            </div>
         </div>
 
-        <div class="jumbotron_button">
-            <a>Projects</a>
-        </div>
+        <AppAbout id="aboutme"></AppAbout>
 
-       </div>
-    </div>
+    </main>
 
-</main>
-    
 
 
 
 </template>
 
-<style></style>
+<style>
+
+
+
+</style>
