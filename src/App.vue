@@ -1,7 +1,5 @@
 <script>
 
-import axios from 'axios';
-
 import AppHeader from './components/AppHeader.vue'
 import AppFooter from './components/AppFooter.vue'
 import AppHome from './views/AppHome.vue';

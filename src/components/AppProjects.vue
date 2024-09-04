@@ -9,8 +9,6 @@ export default {
             projects
         }
     }
-
-
 }
 
 </script>
