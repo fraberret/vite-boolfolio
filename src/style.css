@@ -101,7 +101,13 @@ img {
     margin: auto;
 
 
-    
+
+}
+
+.container_project{
+    width: 100%;
+    margin: auto;
+    margin-top: 4rem ;
 
 }
 
@@ -185,7 +191,7 @@ header {
 
         box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
         height: 0;
-        opacity: 0;
+        display: none;
         transition: height 0.4s ease, opacity 1.8s ease;
 
 
@@ -209,7 +215,7 @@ header {
     .menu-open {
         height: 296px;
         /* Imposta un'altezza massima sufficiente a contenere il menu */
-        opacity: 1;
+        display: block;
 
 
 
