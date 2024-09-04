@@ -107,7 +107,7 @@ img {
 .container_project{
     width: 100%;
     margin: auto;
-    margin-top: 4rem ;
+    margin-top: 5rem ;
 
 }
 
@@ -268,18 +268,6 @@ main {
 
 
             }
-
-
-
-
-        }
-
-
-
-
-        & .profession {
-            padding: 1rem 0rem;
-
         }
 
         & .socials {
@@ -316,154 +304,10 @@ main {
     }
 
     /* HomePage Slider */
-    & .projects_home {
-        height: 100%;
-        margin: 2rem;
-        text-align: center;
-
-        & .slider {
-            width: 60%;
-            margin: auto;
-            height: 100%;
-
-            border-radius: 50%;
-
-            & .item {
-                position: relative;
-
-                border-radius: 50%;
-                width: 100%;
-                object-fit: contain;
-                height: 300px;
-                margin: auto;
-
-                & img {
-                    border-radius: 10px;
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
-
-                & .text {
-                    background-color: black;
-                    position: absolute;
-                    bottom: 20px;
-                    color: white;
-                }
-            }
-
-            & .prev,
-            .next {
-                color: var(--primary);
-                font-size: 30px;
-                margin: 0 10px;
-                border-radius: 50%;
-                position: absolute;
-                cursor: pointer;
-                z-index: 999;
-                transform: translateY(-50%);
-                top: 50%;
-            }
-
-
-            & .next {
-                right: 0;
-
-
-            }
-
-            & .prev {
-                left: 0;
-            }
-
-
-
-        }
-
-    }
-
-    /* Contact us Page */
-    & .contact-us {
-
-        padding: 50px 100px;
-        max-width: 1080px;
-        margin: auto;
-
-        & label,
-        input,
-        textarea {
-            display: block;
-            width: 100%;
-            font-size: 12pt;
-            line-height: 24pt;
-
-        }
-
-        & input {
-            margin-bottom: 24pt;
-        }
-
-        & h3 {
-
-            font-size: 10pt;
-            line-height: 24pt;
-
-            margin: 0 0 0.5em 0;
-        }
-
-        & span {
-            font-size: 8pt;
-        }
-
-        & em {
-            color: #DF2935;
-            font-weight: bold;
-        }
-
-        & input,
-        textarea {
-            border: none;
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            border-radius: 2px;
-            background: white;
-            padding-left: 5px;
-            outline: none;
-        }
-
-        & input:focus,
-        textarea:focus {
-            border: 1px solid #6bd4b1;
-        }
-
-        & textarea {
-            resize: none;
-        }
-
-        & button {
-            display: block;
-            float: right;
-            line-height: 24pt;
-            padding: 0 20px;
-            border: none;
-            background: #DF2935;
-            ;
-            color: white;
-            letter-spacing: 2px;
-            transition: 0.2s all ease-in-out;
-            border-bottom: 2px solid transparent;
-            outline: none;
-        }
-
-        & button:hover {
-            background: inherit;
-            color: var(--primary);
-            border-bottom: 2px solid var(--primary);
-        }
-    }
-
+   
     /* Projects Page */
     & .projects {
-        margin: 71px 0rem;
+        padding: 71px 0rem;
 
     }
 
@@ -472,21 +316,7 @@ main {
 
 
 /* Footer Region */
-footer {
-    background-color: #d0d0d0;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    margin-top: 2rem;
 
-    ul {
-        list-style: none;
-
-        a {
-            text-decoration: none;
-            color: black;
-        }
-    }
-}
 
 
 

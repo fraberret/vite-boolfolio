@@ -37,6 +37,9 @@ export default {
 
                             <p>{{ project.description }}</p>
 
+                          
+                           
+
                             <div class="button">
                                 <a :href='project.link' target="_blank" rel="noopener noreferrer">GitHub</a>
                             </div>
@@ -63,6 +66,8 @@ export default {
 }
 
 .project_info {
+    width: 80%;
+    margin: auto;
     text-align: center;
 
     & h3 {

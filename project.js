@@ -1,48 +1,28 @@
 export const projects = [
     {
         name: 'DeliveBoo',
-        description: 'Descrizione del progetto 1',
+        description: 'Developed in a team of 5 people, DeliveBoo is a food delivery app where users can order from their favorite restaurant',
         image: '/images/deliveboo.png',
         link: 'https://github.com/fraberret/deliveBoo-Frontend',
-        technology:
-            [
-                'html',
-                'sass',
-                'bootstrap',
-                'vue',
-                'laravel',
-                'mysql'
-            ]
+       
 
     },
 
 
     {
         name: 'Boolzapp',
-        description: 'Descrizione del progetto 1',
+        description: 'Boolzapp is a reproduction of the layout of a famous messaging app del progetto 1',
         image: '/images/boolzapp.png',
         link: 'https://github.com/fraberret/vue-boolzapp',
-        technology:
-            [
-                'html',
-                'css',
-                'bootstrap',
-                'vue',
-                
-            ]
+       
     },
 
     {
-        name: 'Siscord Layout Clone',
-        description: 'Descrizione del progetto 1',
+        name: 'Discord Layout Clone',
+        description: `I re-created the frontend of Discord's official website. It was a great experience for me to build the entire frontend.`,
         image: '/images/discord_clone.png',
         link: 'https://github.com/fraberret/htmlcss-discord',
-        technology:
-            [
-                'html',
-                'css',
-                
-            ]
+       
     },
 
 ];

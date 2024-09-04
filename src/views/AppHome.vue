@@ -4,6 +4,7 @@ import axios from 'axios';
 import AppAbout from '../components/AppAbout.vue';
 import AppSkills from '../components/AppSkills.vue';
 import AppProjects from '../components/AppProjects.vue';
+import AppContacts from '../components/AppContacts.vue';
 
 
 export default {
@@ -12,7 +13,9 @@ export default {
     components: {
         AppAbout,
         AppSkills,
-        AppProjects
+        AppProjects,
+        AppContacts
+
     },
 
 
@@ -76,6 +79,7 @@ export default {
 
         <AppAbout id="aboutme"></AppAbout>
         <AppProjects id="projects"></AppProjects>
+        <AppContacts id="contacts"></AppContacts>
 
     </main>
 
