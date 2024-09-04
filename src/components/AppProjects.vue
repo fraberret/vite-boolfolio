@@ -1,7 +1,14 @@
 <script>
+import { projects } from '../../project';
 
 export default {
     name: 'AppProjects',
+
+    data(){
+        return{
+            projects
+        }
+    }
 
 
 }
@@ -18,21 +25,19 @@ export default {
                 <p>Here you will find some of the personal projects that I create</p>
             </div>
 
-            <div class="row">
+            <div v-for="project in projects" class="row">
                 <div class="col_12 col_m_6">
-                    <img src="/images/boolzapp.png" alt="">
+                    <img :src='project.image' alt="">
                 </div>
 
-                <div class="col_12 col_m_6">
+                <div  class="col_12 col_m_6">
                     <div class="project_info">
-                        <h3>Boolzapp</h3>
+                        <h3>{{project.name}}</h3>
 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita saepe pariatur quis,
-                            recusandae odio quas assumenda, placeat beatae totam architecto dolorem ex aperiam vitae a
-                            suscipit dolore nisi? Autem, sapiente.</p>
+                        <p>{{ project.description }}</p>
 
                         <div class="button">
-                            <a href="#aboutme">GitHub</a>
+                            <a :href='project.link'target="_blank" rel="noopener noreferrer">GitHub</a>
                         </div>
 
                     </div>
@@ -52,7 +57,7 @@ export default {
 
 <style>
 .projects_title {
-    margin: 4rem 0rem;
+    margin-bottom: 4rem;
     text-align: center;
 }
 

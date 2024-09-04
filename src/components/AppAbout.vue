@@ -64,7 +64,7 @@ export default {
 }
 
 .aboutme {
-   padding: 4rem 0;
+   padding: 71px 0;
     background-color: #e7e6e6;;
 
 }

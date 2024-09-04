@@ -68,7 +68,7 @@ export default {
                 </div>
 
                 <div class="button">
-                    <a href="#aboutme">Projects</a>
+                    <a href="#projects">Projects</a>
                 </div>
 
             </div>
