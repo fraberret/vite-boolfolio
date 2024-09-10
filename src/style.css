@@ -3,6 +3,7 @@
     --primary: #DF2935;
     --darker: #0F0A0A;
     --dark: #cac6c6;
+    --gradient: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
 }
 
 
@@ -63,7 +64,7 @@ img {
 
 
 .section_heading{
-    letter-spacing: 0.8rem;
+    letter-spacing: 0.3rem;
 }
 
 
@@ -243,7 +244,7 @@ main {
         height: 100vh;
         
         background-color: #4158D0;
-        background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+        background-image: var(--gradient);
         color: white;
 
 
@@ -306,6 +307,10 @@ main {
 
 
 @media (min-width: 650px) {
+
+    .section_heading{
+        letter-spacing: 0.5rem !important;
+    }
 
     .open_menu {
         display: none !important;
@@ -389,3 +394,4 @@ main {
 
 
 }
+

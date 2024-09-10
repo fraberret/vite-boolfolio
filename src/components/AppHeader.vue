@@ -23,20 +23,13 @@ export default {
             ],
             activeRoute: '',
             isMenuOpen: false,
-            
+
         }
     },
     methods: {
-      /*   setActiveRoute(route) {
-            this.activeRoute = route;
-        },
-        isActive(route) {
-            return this.$route.name === route || this.activeRoute === route;
-        }, */
-
         toggleMenu() {
-      this.isMenuOpen = !this.isMenuOpen;
-    }
+            this.isMenuOpen = !this.isMenuOpen;
+        }
     }
 
 }
@@ -45,7 +38,7 @@ export default {
 <template>
     <header>
 
-        <!-- Menu section-->
+        <!-- Header section-->
         <div class="main_menu d-flex justify-between align-center">
 
             <!-- Logo -->
@@ -54,30 +47,29 @@ export default {
                 <strong class="align-center">Francesco Berretta</strong>
             </div>
 
-            <!-- Menu voices -->
-             <div class="up-menu">
+            <!-- Menu Section -->
+            <ul class="up-menu">
 
-                <div v-for="item in menu" class="menu_voice">
-                    <a :href="'#'+ item.route">{{ item.text }}</a>
-                </div>
-              
+                <!-- Menu voices -->
+                <li v-for="item in menu" class="menu_voice">
+                    <a :href="'#' + item.route">{{ item.text }}</a>
+                </li>
+
+                <!-- Mobile Menu Buttons -->
                 <div @click="toggleMenu" class="open_menu">
                     <i v-if="!isMenuOpen" class="fa fa-bars" aria-hidden="true"></i>
                     <i v-else class="fa fa-close" aria-hidden="true"></i>
                 </div>
-            </div>
+            </ul>
         </div>
 
+        <!-- Mobile Menu -->
         <div class="sm_menu_section" :class="{ 'menu-open': isMenuOpen, 'menu-closed': !isMenuOpen }">
             <ul>
                 <li v-for="item in menu" class="sm_menu_voice">
-                   <a :href="'#'+ item.route">{{ item.text }}</a>
+                    <a :href="'#' + item.route">{{ item.text }}</a>
                 </li>
             </ul>
-            
-
         </div>
-
     </header>
-
 </template>
