@@ -1,14 +1,8 @@
-
 <script>
 
 export default {
     name: 'AppSkills',
-
-    
-
 }
-
-
 </script>
 
 <template>
@@ -31,28 +25,3 @@ export default {
     </div>
 </template>
 
-<style>
-
-img{
-    max-width: 100%;
-}
-
-.wrapper{
-    width: 100%;
-    display: flex;
-
-}
-
-.skills{
-    margin-top: 4rem ;
-    & h3 {
-        margin-bottom: 1.5rem;
-    }
-}
-
-
-
-
-
-
-</style>

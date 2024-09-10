@@ -16,10 +16,6 @@ export default {
         AppContacts
 
     },
-
-
-
-
 }
 </script>
 
@@ -27,7 +23,7 @@ export default {
     <main>
         <!-- Jumbotron Section -->
         <div id="home" class="jumbotron">
-            <div class="jumbotron_content d-flex align-center">
+            <div class="jumbotron_content">
 
                 <!-- Jumbotron Title -->
                 <h1>Hi, I'm Francesco Berretta</h1>
@@ -45,9 +41,9 @@ export default {
             </div>
         </div>
 
-        <AppAbout id="aboutme"></AppAbout>
-        <AppProjects id="projects"></AppProjects>
-        <AppContacts id="contacts"></AppContacts>
+        <AppAbout/>
+        <AppProjects/>
+        <AppContacts/>
 
     </main>
 
@@ -56,4 +52,4 @@ export default {
 
 </template>
 
-<style></style>
+

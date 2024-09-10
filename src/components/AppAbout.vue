@@ -14,11 +14,11 @@ export default {
 <template>
 
     <!-- About Me Section -->
-    <div class="aboutme">
+    <div id="aboutme" class="aboutme">
         <div class="container">
 
             <!-- About Me Title -->
-            <div class="aboutme_title">
+            <div class="sections_title">
                 <h1 class="section_heading">ABOUT ME</h1>
                 <div class="underline"></div>
                 <p>Here you will find more information about me</p>
@@ -46,34 +46,3 @@ export default {
 </template>
 
 
-
-<style>
-.underline {
-
-    width: 30px;
-    border-radius: 25%;
-    height: 4px;
-    margin: 1rem auto;
-    background-color: red;
-}
-
-.aboutme {
-    padding: 71px 0;
-    background-color: #f3f3f3;
-    ;
-
-}
-
-.aboutme_title {
-    margin-bottom: 4rem;
-    text-align: center;
-
-
-}
-
-.aboutme_info {
-    & h3 {
-        margin-bottom: 1.5rem;
-    }
-}
-</style>

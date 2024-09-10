@@ -7,11 +7,11 @@ export default {
 <template>
 
     <!-- Contacts Section -->
-    <div class="contacts">
+    <div id="contacts" class="contacts">
         <div class="container">
 
             <!-- Contacts Title -->
-            <div class="projects_title">
+            <div class="sections_title">
                 <h1 class="section_heading">CONTACTS</h1>
                 <div class="underline"></div>
                 <p>Here you will find my contacts and socials</p>
@@ -46,37 +46,9 @@ export default {
 
 
 <style>
-.contacts {
-    background-image: linear-gradient(225deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-    color: white;
-    padding: 71px 0;
-    background-color: #f3f3f3;
-
-}
-
-.contacts_container {
-    padding: 2rem 0;
-    text-align: center;
-    color: black;
-    background-color: white;
-    border-radius: 30px;
-    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
-
-    & p {
-        padding: 2rem 0;
-    }
-
-
-}
-
-.socials {
-
-    margin: auto;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
 
 
 
-}
+
+
 </style>
