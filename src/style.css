@@ -24,9 +24,6 @@
 
 /* #endregion Fonts */
 
-.container_lg {
-    min-width: 70%;
-}
 
 /* #region General rules  */
 * {
@@ -79,6 +76,10 @@ img {
     }
 }
 
+.container_lg {
+    min-width: 70%;
+}
+
 
 .container_m {
     width: 80%;
@@ -89,9 +90,6 @@ img {
 .container {
     width: 90%;
     margin: auto;
-
-
-
 }
 
 .container_project {
@@ -101,7 +99,6 @@ img {
 
 .button {
 
-
     & a {
         border: var(--primary) 4px solid;
         display: inline-block;
@@ -110,7 +107,6 @@ img {
         border-radius: 10px;
         color: black;
     }
-
 }
 
 .sections_title {
@@ -151,14 +147,11 @@ header {
         padding: 1rem;
     }
 
-
-
     .up-menu {
         gap: 1rem;
         display: flex;
         justify-content: center;
         text-decoration: none;
-
 
         .menu_voice {
             position: relative;
@@ -204,7 +197,7 @@ header {
             margin-right: 0.7rem;
         }
 
-        & strong{
+        & strong {
             align-items: center;
         }
     }
@@ -404,7 +397,7 @@ footer {
 
 
 
-
+/*  Media Queries */
 @media (min-width: 650px) {
 
     .section_heading {
@@ -428,10 +421,8 @@ footer {
 @media (min-width: 992px) {
 
     .col_m_6 {
-
         width: calc(100%/12*6) !important;
         padding: 1rem !important;
-
     }
 
     .project_info {
@@ -440,13 +431,7 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: center;
-
-
     }
-
-
-
-
 }
 
 @media (min-width: 1200px) {
@@ -489,7 +474,4 @@ footer {
     .contacts {
         padding: 100px 0 !important;
     }
-
-
-
 }

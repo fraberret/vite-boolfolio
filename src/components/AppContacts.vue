@@ -32,9 +32,9 @@ export default {
                     <div class="socials">
                         <a href="https://github.com/fraberret" target="_blank" rel="noopener noreferrer"> <i
                                 class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
-                        <a href="" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"
+                        <a href="https://www.linkedin.com/in/francesco-berretta-dev/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"
                                 aria-hidden="true"></i> Linkedin</a>
-                        <a href="" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"
+                        <a href="https://www.instagram.com/_.cccesco/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"
                                 aria-hidden="true"></i> Instagram</a>
                     </div>
                 </div>
