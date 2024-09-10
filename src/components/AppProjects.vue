@@ -18,7 +18,7 @@ export default {
     <div class="projects">
         <div class="container_m">
             <div class="projects_title">
-                <h1>PROJECTS</h1>
+                <h1 class="section_heading">PROJECTS</h1>
                 <div class="underline"></div>
                 <p>Here you will find some of the personal projects that I create</p>
             </div>
@@ -26,7 +26,7 @@ export default {
             <div v-for="project in projects" class="container_project">
                 <div  class="row">
                     <div class="col_12 col_m_6">
-                        <img :src='project.image' alt="">
+                        <img :src='project.image' :alt="project.name + ' screenshot'">
                     </div>
 
                     <div class="col_12 col_m_6">

@@ -15,7 +15,7 @@ export default {
     <div class="aboutme">
         <div class="container">
            <div class="aboutme_title">
-            <h1>ABOUT ME</h1>
+            <h1 class="section_heading">ABOUT ME</h1>
             <div class="underline"></div>
             <p>Here you will find more information about me</p>
         </div>
@@ -39,8 +39,10 @@ export default {
                 <strong>contact</strong> me.
             </p>
         </div>
-        <AppSkills></AppSkills> 
-        </div>
+        
+    </div>
+    
+    <AppSkills></AppSkills> 
         
     </div>
 

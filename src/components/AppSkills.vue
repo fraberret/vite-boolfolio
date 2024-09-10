@@ -14,7 +14,7 @@ export default {
 <template>
     <div class="skills">
 
-        <h3>My Skills</h3>
+        
 
         <div class="wrapper">
 
@@ -36,7 +36,7 @@ export default {
 <style>
 
 img{
-    max-width: 100&;
+    max-width: 100%;
 }
 
 .wrapper{
