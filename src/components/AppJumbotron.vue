@@ -1,9 +1,24 @@
 <template>
   <div>
     <!-- Jumbotron con lo sfondo dinamico -->
-    <div class="jumbotrono" ref="jumbotron">
+    <div class="jumbotron" ref="jumbotron">
       <div class="color-ball" ref="colorBall"></div>
-      <h1>Benvenuti!</h1>
+      <div class="jumbotron_content" ref="jumbotronContent">
+
+        <!-- Jumbotron Title -->
+        <h1>Hi, I'm Francesco Berretta</h1>
+
+        <!-- Jumbotron Info -->
+        <div class="jumbotron_info">
+          <p>A Result-Oriented Web Developer building and managing Websites and Web Applications that leads to
+            the success of the overall product</p>
+        </div>
+
+        <!-- Jumbotron Button -->
+        <div class="button">
+          <a href="#projects">Projects</a>
+        </div>
+      </div>
     </div>
 
     <!-- Palla iniziale al centro dello schermo -->
@@ -24,8 +39,11 @@ export default {
 
       let colorBall = this.$refs.colorBall
       let jumbotron = this.$refs.jumbotron
+      let jumbotronContent = this.$refs.jumbotronContent
 
       let tl = gsap.timeline();
+
+
 
       tl.to(colorBall, {
 
@@ -34,21 +52,32 @@ export default {
         background: "linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%)",
         ease: "power3.inOut",
 
-       
+
 
 
       });
 
       tl.to(colorBall, {
 
-        duration: 0.5,
+        duration: 0.3,
         scale: 50,
-       
-        ease: "power3.inOut",
 
-     
+        ease: "power3.in",
+
+
 
         onComplete: () => {
+          tl.to(jumbotron, {
+            duration: 0.5,
+            background: "linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%)",
+            ease: "power3.inOut"
+          })
+          gsap.to(jumbotronContent, {
+            duration:0.5,
+            opacity: 1,
+            ease: "power3.inOut"
+
+          })
           tl.to(colorBall, {
             duration: 0.5,
             opacity: 0,
@@ -61,11 +90,7 @@ export default {
 
       });
 
-      tl.to(jumbotron, {
-        duration: 0,
-        background: "linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%)",
-        ease: "power3.inOut"
-      })
+
 
 
 
@@ -77,15 +102,10 @@ export default {
 
 <style scoped>
 /* Stili di base */
-html,
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
 
-}
 
-.jumbotrono {
+.jumbotron {
+
   position: relative;
   display: flex;
   justify-content: center;
@@ -101,12 +121,12 @@ body {
 
 h1 {
   font-size: 4rem;
-  color: #fff;
+
 }
 
 /* La palla iniziale */
 .color-ball {
-  
+
   max-width: 100%;
   position: absolute;
   top: 0;
@@ -120,9 +140,4 @@ h1 {
   z-index: 10;
   transition: scale 1s ease;
 }
-
-
-
-
-
 </style>

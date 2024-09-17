@@ -261,13 +261,15 @@ main {
     /* Jumbotron Section */
     & .jumbotron {
         height: 100vh;
-        background-image: var(--gradient);
+
         color: white;
 
         & .jumbotron_content {
             display: flex;
             align-content: center;
             flex-direction: column;
+            opacity: 0;
+            
             width: 90%;
             margin: auto;
             padding-top: 80px;

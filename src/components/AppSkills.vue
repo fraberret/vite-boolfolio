@@ -119,8 +119,12 @@ export default {
 
 <template>
 
-    <!-- Skills Section -->
     <div class="skills">
+        <div class="container">
+        <h3>My Skills</h3>
+    </div>
+    <!-- Skills Section -->
+    <div class="skills-container">
 
 
         <!-- Skills Logos -->
@@ -135,56 +139,68 @@ export default {
 
 
     </div>
+    </div>
 </template>
 
 <style>
 
-.skills {
-  width: 100%;
-  height: 100px; 
-  position: relative;
-  display: flex;
-  align-items: center;
-  overflow: hidden; 
+h3{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.skills-container {
+    background-color: #fff;
+    width: 100%;
+    height: 80px;
+    
+    border-top: 2px solid red;
+    border-bottom: 2px solid red;
+    
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
 
 }
 
 .wrapper {
-  width: 20%; 
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0; 
+    
+    display: flex;
+    align-items: center;
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 
- 
+
 }
 
 .wrapper::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  padding-bottom: 100%; 
- 
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 100%;
+
 }
 
 .logo {
-  display: flex; 
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 
 }
 
 .logo img {
-  width: 50px; 
-  height: auto; 
-  display: block; 
+    width: 50px;
+    height: auto;
+    display: block;
 }
-
-
 </style>
