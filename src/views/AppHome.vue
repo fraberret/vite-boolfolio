@@ -4,6 +4,7 @@ import AppAbout from '../components/AppAbout.vue';
 import AppSkills from '../components/AppSkills.vue';
 import AppProjects from '../components/AppProjects.vue';
 import AppContacts from '../components/AppContacts.vue';
+import test from '../components/test.vue';
 
 
 export default {
@@ -13,7 +14,8 @@ export default {
         AppAbout,
         AppSkills,
         AppProjects,
-        AppContacts
+        AppContacts,
+        test
 
     },
 }
@@ -21,6 +23,9 @@ export default {
 
 <template>
     <main>
+
+        <test/>
+
         <!-- Jumbotron Section -->
         <div id="home" class="jumbotron">
             <div class="jumbotron_content">
@@ -40,6 +45,7 @@ export default {
                 </div>
             </div>
         </div>
+
 
         <AppAbout/>
         <AppProjects/>

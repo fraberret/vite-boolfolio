@@ -297,18 +297,7 @@ main {
             }
         }
 
-        & .skills {
-            margin-top: 4rem;
-
-            & h3 {
-                margin-bottom: 1.5rem;
-            }
-
-            & .wrapper {
-                width: 100%;
-                display: flex;
-            }
-        }
+        
     }
 
     /* Projects Section */
