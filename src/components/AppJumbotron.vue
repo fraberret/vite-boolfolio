@@ -1,6 +1,6 @@
 <template>
     <!-- Jumbotron con lo sfondo dinamico -->
-    <div class="jumbotron" ref="jumbotron">
+    <div id="home" class="jumbotron" ref="jumbotron">
       <div class="color-ball" ref="colorBall"></div>
       <div class="jumbotron_content" ref="jumbotronContent">
 

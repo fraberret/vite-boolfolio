@@ -213,45 +213,25 @@ header {
     .sm_menu_section {
 
         box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
-        height: 0;
+        height: 0px;
         display: none;
-        transition: height 0.4s ease, opacity 1.8s ease;
-
-
+        opacity: 0;
+    
+    
     }
-
+ 
 
     .sm_menu_voice {
-
-
         text-align: right;
         list-style: none;
-
+        height: 0;
+        opacity: 0;
         & a {
             display: block;
             width: 100%;
             border-top: 1px solid var(--dark);
             padding: 1.5rem;
         }
-    }
-
-    .menu_open {
-        height: 296px;
-        /* Imposta un'altezza massima sufficiente a contenere il menu */
-        display: block;
-
-
-
-
-        /* Mostra il menu quando è aperto */
-    }
-
-    .menu_closed {
-        height: 0;
-        /* Imposta un'altezza massima sufficiente a contenere il menu */
-        opacity: 0;
-        transition: height 0.4s ease, opacity 0.2s ease;
-        /* Assicura che il menu sia nascosto quando è chiuso */
     }
 
 }
