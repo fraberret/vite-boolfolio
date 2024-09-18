@@ -43,7 +43,7 @@ export default {
 
             <!-- Logo -->
             <div class="logo_container ">
-                <img class="main_logo" src="/images/logo.jpg" alt="">
+                <img class="main_logo" src="/images/logo.jpg" alt="main website logo">
                 <strong >Francesco Berretta</strong>
             </div>
 

@@ -32,7 +32,7 @@ export default {
 
                     <!-- Projects Image -->
                     <div class="col_12 col_m_6">
-                        <img :src='project.image' :alt="project.name + ' screenshot'">
+                        <img :src='project.image' :alt="project.name + ' project screenshot'">
                     </div>
 
                     <!-- Projects Info -->
