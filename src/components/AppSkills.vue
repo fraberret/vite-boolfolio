@@ -5,7 +5,6 @@ export default {
 
     data() {
         return {
-
             skills: [
                 {
                     'name': 'html',
@@ -66,7 +65,6 @@ export default {
                 autoAlpha: 1
             })
             wrapper.forEach((logo, i) => {
-
                 gsap.set(logo, { xPercent: 100 * i });
             });
             if (wrapper.length > 5) {
@@ -99,6 +97,7 @@ export default {
             <div v-for="skill in skills" class="wrapper" ref="logoWrapper">
                 <div class="logo">
                     <img :src=skill.image :alt="skill.name + ' logo'">
+                    <h4>{{ skill.name }}</h4>
                 </div>
             </div>
         </div>

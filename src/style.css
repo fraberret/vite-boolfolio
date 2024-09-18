@@ -216,16 +216,17 @@ header {
         height: 0px;
         display: none;
         opacity: 0;
-    
-    
+
+
     }
- 
+
 
     .sm_menu_voice {
         text-align: right;
         list-style: none;
         height: 0;
         opacity: 0;
+
         & a {
             display: block;
             width: 100%;
@@ -311,18 +312,35 @@ main {
                 background-color: #fff;
                 width: 100%;
                 height: 80px;
-                border-top: 2px solid red;
-                border-bottom: 2px solid red;
+                border-top: 3px solid red;
+                border-bottom: 3px solid red;
                 position: relative;
                 display: flex;
                 align-items: center;
                 overflow: hidden;
             }
 
+            .skills-container::before,
+            .skills-container::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                width: 20%;
+                height: 100%;
+                background: linear-gradient(to right, rgb(255, 255, 255), transparent);
+                z-index: 1;
+            }
+
+            .skills-container::after {
+                right: 0;
+                left: auto;
+                background: linear-gradient(to left, rgb(255, 255, 255), transparent);
+            }
+
             & .wrapper {
                 display: flex;
                 align-items: center;
-                width: 20%;
+                width: 35%;
                 height: 100%;
                 position: absolute;
                 top: 0;
@@ -342,6 +360,7 @@ main {
                         width: 50px;
                         height: auto;
                         display: block;
+                        margin-right: 1rem;
                     }
                 }
             }
@@ -463,6 +482,11 @@ footer {
         display: block !important;
     }
 
+    .wrapper {
+        width: 25% !important;
+
+    }
+
 }
 
 @media (min-width: 992px) {
@@ -479,6 +503,11 @@ footer {
         flex-direction: column;
         justify-content: center;
     }
+
+    .wrapper {
+        width: 20% !important;
+
+    }
 }
 
 @media (min-width: 1200px) {
@@ -494,13 +523,13 @@ footer {
     }
 
     .main_logo {
-        width: 50px !important;
+        width: 40px !important;
         margin-right: 1rem !important;
     }
 
     .container,
     .container_m {
-        max-width: 1200px;
+        width: 1200px;
     }
 
 
@@ -521,4 +550,60 @@ footer {
     .contacts {
         padding: 100px 0 !important;
     }
+}
+
+@media (min-width: 1800px) {
+
+    .main_menu {
+        width: 90%;
+        margin: auto;
+        padding: 1rem 0 !important;
+    }
+
+    .up-menu {
+        gap: 3rem !important;
+    }
+
+    .main_logo {
+        width: 50px !important;
+        margin-right: 1rem !important;
+    }
+
+    .container,
+    .container_m {
+        width: 1400px;
+    }
+
+
+    .jumbotron_info {
+        font-size: 22px;
+    }
+
+    .jumbotron_content {
+        max-width: 1200px;
+
+        & h1 {
+            font-size: 3rem;
+        }
+    }
+
+    .aboutme,
+    .projects,
+    .contacts {
+        padding: 110px 0 !important;
+    }
+
+    .skills-container {
+        height: 100px !important;
+    }
+
+    .wrapper {
+        width: 15% !important;
+
+    }
+
+    .logo img {
+        width: 70px !important;
+    }
+
 }

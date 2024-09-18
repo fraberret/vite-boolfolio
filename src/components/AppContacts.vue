@@ -23,7 +23,7 @@ export default {
 
                     <!-- Contacts Button -->
                     <div class="button">
-                        <a>Send Me an Email</a>
+                        <a href="mailto:f.berretta02@gmail.com">Send Me an Email</a>
                     </div>
 
                     <p>Or</p>
@@ -42,13 +42,3 @@ export default {
         </div>
     </div>
 </template>
-
-
-
-<style>
-
-
-
-
-
-</style>
