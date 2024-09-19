@@ -7,47 +7,47 @@ export default {
         return {
             skills: [
                 {
-                    'name': 'html',
+                    'name': 'HTML',
                     'image': '/images/logo-html.svg'
                 },
                 {
-                    'name': 'css',
+                    'name': 'CSS',
                     'image': '/images/logo-css.svg'
                 },
                 {
-                    'name': 'bootstrap',
+                    'name': 'Bootstrap',
                     'image': '/images/logo-bootstrap.svg'
                 },
                 {
-                    'name': 'javascript',
+                    'name': 'JavaScript',
                     'image': '/images/logo-javascript.svg'
                 },
                 {
-                    'name': 'vue',
+                    'name': 'Vue',
                     'image': '/images/logo-vue.svg'
                 },
                 {
-                    'name': 'wordpress',
+                    'name': 'WordPress',
                     'image': '/images/logo-wordpress.svg'
                 },
                 {
-                    'name': 'php',
+                    'name': 'PHP',
                     'image': '/images/logo-php.svg'
                 },
                 {
-                    'name': 'laravel',
+                    'name': 'Laravel',
                     'image': '/images/logo-laravel.svg'
                 },
                 {
-                    'name': 'mysql',
+                    'name': 'MySQL',
                     'image': '/images/logo-mysql.svg'
                 },
                 {
-                    'name': 'sass',
+                    'name': 'SASS',
                     'image': '/images/logo-sass.svg'
                 },
                 {
-                    'name': 'gsap',
+                    'name': 'GSAP',
                     'image': '/images/logo-gsap.svg'
                 },
             ],
