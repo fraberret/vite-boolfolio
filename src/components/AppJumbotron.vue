@@ -14,8 +14,12 @@
         </div>
 
         <!-- Jumbotron Button -->
-        <div class="button">
+        <div class="jumbotron_button">
           <a href="#projects">Projects</a>
+        </div>
+
+        <div class="scrolldown">
+          <i class="fa fa-arrow-down" aria-hidden="true" ref="scrollDown"></i>
         </div>
       </div>
     </div>
@@ -28,6 +32,7 @@ import { gsap } from "gsap";
 export default {
   mounted() {
     this.animateColorExplosion();
+    this.scrollDownArrow();
   },
   methods: {
     animateColorExplosion() {
@@ -68,6 +73,20 @@ export default {
           })
         }
       });
+    },
+
+    scrollDownArrow(){
+      let arrow = this.$refs.scrollDown;
+      let tl = gsap.timeline();
+
+      tl.to(arrow, {
+        bottom:0,
+        duration:1.5,
+        yoyo:true,
+        repeat:-1,
+        ease:"circ.inOut"
+      })
+
     }
   }
 };

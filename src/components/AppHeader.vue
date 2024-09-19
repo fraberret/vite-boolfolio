@@ -28,6 +28,12 @@ export default {
 
         }
     },
+
+    mounted(){
+        this.logoRotation();
+
+    },
+
     methods: {
         toggleMenu() {
             this.isMenuOpen = !this.isMenuOpen
@@ -64,6 +70,19 @@ export default {
                     ease: "power3.out"
                 }, "-=0.3")
             }
+        },
+
+        logoRotation(){
+            let tl=gsap.timeline();
+            let logo = this.$refs.mainLogo;
+
+            tl.to(logo,{
+                duration:1,
+                left:0,
+                rotation:720,
+                
+            })
+
         }
     }
 }
@@ -76,10 +95,10 @@ export default {
         <div class="main_menu">
 
             <!-- Logo -->
-            <div class="logo_container ">
-                <img class="main_logo" src="/images/logo.jpg" alt="main website logo">
+            <a href="#home"><div class="logo_container ">
+                <img class="main_logo" src="/images/logo.jpg" ref="mainLogo" alt="main website logo">
                 <strong>Francesco Berretta</strong>
-            </div>
+            </div></a>
 
             <!-- Menu Section -->
             <ul class="up-menu">
