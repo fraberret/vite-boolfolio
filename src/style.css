@@ -108,7 +108,15 @@ img {
         padding: 1rem 5rem;
         border-radius: 10px;
         color: black;
+        transition: background-color 0.3s, color 0.3s, border-color 0.3s, transform 0.3s;
     }
+
+    & a:hover {
+        background-color: var(--primary);
+        color: white;
+        transform: scale(1.05); 
+    }
+
 }
 
 .sections_title {
@@ -292,10 +300,18 @@ main {
                     
                     display: inline-block;
                     background-color: rgb(38, 38, 38);
-                    padding: 1rem 5rem;
+                    padding: 1.2rem 5.2rem;
                     border-radius: 10px;
                     color: rgb(255, 255, 255);
+                    transition: background-color 0.3s, color 0.3s, transform 0.3s;
                 }
+            
+                & a:hover {
+                    background-color: rgb(109, 109, 109); 
+                    color: rgb(255, 255, 255); 
+                    transform: scale(1.05);
+                }
+                
             }
 
             .scrolldown{
@@ -377,7 +393,7 @@ main {
             & .wrapper {
                 display: flex;
                 align-items: center;
-                width: 35%;
+                width: 45%;
                 height: 100%;
                 position: absolute;
                 top: 0;

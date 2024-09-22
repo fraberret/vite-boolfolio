@@ -11,7 +11,7 @@ export const projects = [
 
     {
         name: 'Boolzapp',
-        description: 'Boolzapp is a reproduction of the layout of a famous messaging app del progetto 1',
+        description: 'Boolzapp is a reproduction of the layout of a famous messaging app',
         image: '/images/boolzapp.png',
         link: 'https://github.com/fraberret/vue-boolzapp',
        
